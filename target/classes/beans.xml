@@ -4,11 +4,17 @@
  	xsi:schemaLocation="http://www.springframework.org/schema/beans
  	https://www.springframework.org/schema/beans/spring-beans.xsd">
  	
+ 	<bean id="mcObj" class="com.springDI.MathCheat"></bean>
+ 	
  	<!--Below bean for Constructor based DI -->
  	<bean class="com.springDI.Student" id="student"> 
  		<constructor-arg name="sid" value="123" type="int"/>
  		<constructor-arg name="sname" value="Jay"/>
  		<constructor-arg name="saddress" value="Akshardham"/>
+ 		<property name="mc" ref="mcObj"></property>
+ 		<!-- <property name="mc">
+ 			<bean class="com.springDI.MathCheat"></bean>
+ 		</property> -->
  	</bean> 
 
 	<!--Below bean for setter method -->

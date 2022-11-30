@@ -14,6 +14,13 @@ public class StudentExam {
 		
 		//Student s1 = conetx.getBean("student1",Student.class);
 		//System.out.println(s1.getSid()+" "+s1.getSname()+" "+s1.getSaddress());
+		
+		//object injection 
+		/*  Student student = new Student();
+			MathCheat cheat = new MathCheat();
+		    student.setMathCheat(cheat);
+		*/
+		s.cheating();
 	}
 
 }

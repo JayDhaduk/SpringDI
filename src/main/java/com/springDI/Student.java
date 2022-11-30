@@ -2,9 +2,13 @@ package com.springDI;
 
 public class Student {
 	
+	// Litral injection 
 	private String sname;
 	private int sid;
 	private String saddress;
+	
+	// Object injection Most Important
+	private MathCheat mc;
 	
 //	public String getSname() {
 //		return sname;
@@ -36,5 +40,16 @@ public class Student {
 		return "Student [sname=" + sname + ", sid=" + sid + ", saddress=" + saddress + "]";
 	}
    
+	public void cheating() {
+		mc.mathsCheat();
+	}
 	
+	// object injection
+	public MathCheat getMc() {
+		return mc;
+	}
+
+	public void setMc(MathCheat mc) {
+		this.mc = mc;
+	}
 }
