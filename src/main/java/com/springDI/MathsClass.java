@@ -1,4 +1,4 @@
-package com.SetterProperty;
+package com.springDI;
 
 public class MathsClass implements Subject{
 
