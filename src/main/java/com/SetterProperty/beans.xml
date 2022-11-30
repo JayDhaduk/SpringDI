@@ -3,12 +3,20 @@
  	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  	xsi:schemaLocation="http://www.springframework.org/schema/beans
  	https://www.springframework.org/schema/beans/spring-beans.xsd">
-
+	
 	<!--Below bean for setter method -->
 	<bean class="com.SetterProperty.Student" id="student1"> 
  		<property name="sid" value="456"></property>
  		<property name="sname" value="Shiv"></property>
  		<property name="gmail" value="shiv@gmail.com"></property>
+ 		<property name="address">
+ 			<bean class="com.SetterProperty.Address">
+ 				<constructor-arg name="home_num" value="124"></constructor-arg>
+ 				<constructor-arg name="city" value="GUIGUES AVE"></constructor-arg>
+ 				<constructor-arg name="town" value="OTTAWA"></constructor-arg>
+ 				<constructor-arg name="postcode" value="K1N 5H7"></constructor-arg>
+ 			</bean>
+ 		</property>
  		
  		<!--Below bean for setter method -->
  		<constructor-arg name="sage" value="25"></constructor-arg>
@@ -22,6 +30,14 @@
  		<property name="sid" value="123"></property>
  		<property name="sname" value="Dhara"></property>
  		<property name="gmail" value="dhara@gmail.com"></property>
+ 		<property name="address">
+ 			<bean class="com.SetterProperty.Address">
+ 				<constructor-arg name="home_num" value="14"></constructor-arg>
+ 				<constructor-arg name="city" value="Kathi AVE"></constructor-arg>
+ 				<constructor-arg name="town" value="Junagadh"></constructor-arg>
+ 				<constructor-arg name="postcode" value="K51 8H9"></constructor-arg>
+ 			</bean>
+ 		</property>
  		
  		<!--Below bean for setter method -->
  		<constructor-arg name="sage" value="24"></constructor-arg>
