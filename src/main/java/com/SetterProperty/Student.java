@@ -8,7 +8,9 @@ public class Student {
 	private String gmail;
 
 	// Object Injection -- DI by Setter Method
-	private Address address;
+	private Address address;  
+	private Subject subject;   // Subject subject = null;
+	
 
 	public Address getAddress() {
 		return address;
@@ -16,6 +18,14 @@ public class Student {
 
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+	
+	public Subject getSubject() {
+		return subject;
+	}
+
+	public void setSubject(Subject subject) {
+		this.subject = subject;
 	}
 
 	public String getSname() {
@@ -58,12 +68,16 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [sname=" + sname + ", sid=" + sid + ", gmail=" + gmail + ", sage=" + sage + ", gender=" + gender
-				+ ", sAdvisior=" + sAdvisior + ", gpa=" + gpa + "]";
+		return "Student [sname=" + sname + ", sid=" + sid + ", gmail=" + gmail + ", address=" + address +
+				", sage=" + sage + ", gender=" + gender + ", sAdvisior=" + sAdvisior + ", gpa=" + gpa + "]";
 	}
 
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	
+	public String cheatSheet() {
+		return subject.accessCheatSheet()+"\n";
 	}
 }

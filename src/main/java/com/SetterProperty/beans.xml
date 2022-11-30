@@ -3,6 +3,12 @@
  	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  	xsi:schemaLocation="http://www.springframework.org/schema/beans
  	https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 	
+ 	<!-- Create Seprate bean and link by ID-Ref -->
+ 	<!--  MathsClass mathsclass = new MathsClass(); --> 
+ 	<!--  ScienceClass scienceclass = new ScienceClass(); -->
+ 	<bean class="com.SetterProperty.MathsClass" id="mathsclass"/>    
+ 	<bean class="com.SetterProperty.ScienceClass" id="scienceclass"/>
 	
 	<!-- ****************** Student1 Bean ****************** -->
 	<!--Below bean for setter method -->
@@ -18,6 +24,7 @@
  				<constructor-arg name="postcode" value="K1N 5H7"></constructor-arg>
  			</bean>
  		</property>
+ 		<property name="subject" ref="mathsclass"></property>  <!-- Subject subject=new MathsClass() -->
  		
  		<!--Below bean for setter method -->
  		<constructor-arg name="sage" value="25"></constructor-arg>
@@ -41,6 +48,7 @@
  				<constructor-arg name="postcode" value="K51 8H9"></constructor-arg>
  			</bean>
  		</property>
+ 		<property name="subject" ref="scienceclass"></property>  <!-- Subject subject=new ScienceClass() -->
  		
  		<!-- Below bean for setter method -->
  		<constructor-arg name="sage" value="24"></constructor-arg>
@@ -64,6 +72,7 @@
  		<property name="sname" value="Jay"></property>
  		<property name="gmail" value="jay@gmail.com"></property>
  		<property name="address" ref="saddress"></property>
+ 		<property name="subject" ref="mathsclass"></property>   <!-- Subject subject=new MathsClass() -->
  		
  		<!--Below bean for setter method -->
  		<constructor-arg name="sage" value="25"></constructor-arg>
