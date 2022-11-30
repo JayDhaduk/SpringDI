@@ -4,6 +4,7 @@
  	xsi:schemaLocation="http://www.springframework.org/schema/beans
  	https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
+	<!-- ****************** Student1 Bean ****************** -->
 	<!--Below bean for setter method -->
 	<bean class="com.SetterProperty.Student" id="student1"> 
  		<property name="sid" value="456"></property>
@@ -23,9 +24,11 @@
  		<constructor-arg name="gender" value="Male"></constructor-arg>
  		<constructor-arg name="sAdvisior" value="|ChintanSir"></constructor-arg>
  		<constructor-arg name="gpa" value="7.8"></constructor-arg>
- 		
  	</bean> 
+ 	<!-- ****************************************************************************** -->
  	
+ 	
+ 	<!-- ****************** Student2 Bean ****************** -->
  	<bean class="com.SetterProperty.Student" id="student2"> 
  		<property name="sid" value="123"></property>
  		<property name="sname" value="Dhara"></property>
@@ -39,12 +42,35 @@
  			</bean>
  		</property>
  		
- 		<!--Below bean for setter method -->
+ 		<!-- Below bean for setter method -->
  		<constructor-arg name="sage" value="24"></constructor-arg>
  		<constructor-arg name="gender" value="Female"></constructor-arg>
  		<constructor-arg name="sAdvisior" value="Tirthsir"></constructor-arg>
  		<constructor-arg name="gpa" value="8.8"></constructor-arg>
+ 	</bean>
+ 	<!-- ****************************************************************************** -->
+ 	
+ 	<!-- ****************** Student3 Bean ****************** -->
+ 	<!-- created seprate Address bean and use it by (ID and REFRENCE)  -->
+ 	<bean id="saddress" class="com.SetterProperty.Address">
+ 				<constructor-arg name="home_num" value="12"></constructor-arg>
+ 				<constructor-arg name="city" value="Kathi soc"></constructor-arg>
+ 				<constructor-arg name="town" value="MK"></constructor-arg>
+ 				<constructor-arg name="postcode" value="mk62ty"></constructor-arg>
+ 	</bean>
+ 			
+ 	<bean class="com.SetterProperty.Student" id="student3"> 
+ 		<property name="sid" value="789"></property>
+ 		<property name="sname" value="Jay"></property>
+ 		<property name="gmail" value="jay@gmail.com"></property>
+ 		<property name="address" ref="saddress"></property>
  		
+ 		<!--Below bean for setter method -->
+ 		<constructor-arg name="sage" value="25"></constructor-arg>
+ 		<constructor-arg name="gender" value="Male"></constructor-arg>
+ 		<constructor-arg name="sAdvisior" value="Sevak Sir"></constructor-arg>
+ 		<constructor-arg name="gpa" value="8.5"></constructor-arg>
  	</bean> 
+  	<!-- ****************************************************************************** -->
   	
  </beans>

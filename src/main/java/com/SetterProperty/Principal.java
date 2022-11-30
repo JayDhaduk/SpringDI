@@ -14,7 +14,8 @@ public class Principal {
 		
 		Student s2 = context.getBean("student2",Student.class);
 		System.out.println(s2.toString()+"\n"+s2.getAddress());
-	
-		 		 
+		
+		Student s3 = context.getBean("student3",Student.class);
+		System.out.println(s3.toString()+"\n"+s3.getAddress());
 	}
 }
