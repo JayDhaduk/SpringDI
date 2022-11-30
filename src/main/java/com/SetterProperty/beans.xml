@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--Below bean for setter method -->
+	<bean class="com.SetterProperty.Student" id="student1"> 
+ 		<property name="sid" value="456"></property>
+ 		<property name="sname" value="Shiv"></property>
+ 		<property name="gmail" value="shiv@gmail.com"></property>
+ 		
+ 		<!--Below bean for setter method -->
+ 		<constructor-arg name="sage" value="25"></constructor-arg>
+ 		<constructor-arg name="gender" value="Male"></constructor-arg>
+ 		<constructor-arg name="sAdvisior" value="|ChintanSir"></constructor-arg>
+ 		<constructor-arg name="gpa" value="7.8"></constructor-arg>
+ 		
+ 	</bean> 
+ 	
+ 	<bean class="com.SetterProperty.Student" id="student2"> 
+ 		<property name="sid" value="123"></property>
+ 		<property name="sname" value="Dhara"></property>
+ 		<property name="gmail" value="dhara@gmail.com"></property>
+ 		
+ 		<!--Below bean for setter method -->
+ 		<constructor-arg name="sage" value="24"></constructor-arg>
+ 		<constructor-arg name="gender" value="Female"></constructor-arg>
+ 		<constructor-arg name="sAdvisior" value="Tirthsir"></constructor-arg>
+ 		<constructor-arg name="gpa" value="8.8"></constructor-arg>
+ 		
+ 	</bean> 
+  	
+ </beans>

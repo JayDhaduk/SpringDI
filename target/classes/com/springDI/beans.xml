@@ -5,13 +5,15 @@
  	https://www.springframework.org/schema/beans/spring-beans.xsd">
  	
  	<bean id="mcObj" class="com.springDI.MathCheat"></bean>
+ 	<bean id="scObj" class="com.springDI.ScienceCheat"></bean>
+ 	<bean id="javaObj" class="com.springDI.JavaCheat"></bean>
  	
  	<!--Below bean for Constructor based DI -->
  	<bean class="com.springDI.Student" id="student"> 
  		<constructor-arg name="sid" value="123" type="int"/>
  		<constructor-arg name="sname" value="Jay"/>
  		<constructor-arg name="saddress" value="Akshardham"/>
- 		<property name="mc" ref="mcObj"></property>
+ 		<property name="cheat" ref="javaObj"></property>
  		<!-- <property name="mc">
  			<bean class="com.springDI.MathCheat"></bean>
  		</property> -->

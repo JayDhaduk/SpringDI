@@ -1,15 +1,18 @@
 package com.springDI;
 
 public class Student {
-	
-	// Litral injection 
+
+	// Litral injection
 	private String sname;
 	private int sid;
 	private String saddress;
-	
+
 	// Object injection Most Important
 	private MathCheat mc;
+	private ScienceCheat sc;
 	
+	private Cheat cheat;
+
 //	public String getSname() {
 //		return sname;
 //	}
@@ -28,7 +31,15 @@ public class Student {
 //	public void setSaddress(String saddress) {
 //		this.saddress = saddress;
 //	}
-	
+
+	public Cheat getCheat() {
+		return cheat;
+	}
+
+	public void setCheat(Cheat cheat) {
+		this.cheat = cheat;
+	}
+
 	public Student(String sname, int sid, String saddress) {
 		super();
 		this.sname = sname;
@@ -39,11 +50,12 @@ public class Student {
 	public String displayInfo() {
 		return "Student [sname=" + sname + ", sid=" + sid + ", saddress=" + saddress + "]";
 	}
-   
+
 	public void cheating() {
-		mc.mathsCheat();
+		
+		cheat.cheat();
 	}
-	
+
 	// object injection
 	public MathCheat getMc() {
 		return mc;
@@ -52,4 +64,12 @@ public class Student {
 	public void setMc(MathCheat mc) {
 		this.mc = mc;
 	}
+
+	public ScienceCheat getSc() {
+		return sc;
+	}
+
+	public void setSc(ScienceCheat sc) {
+		this.sc = sc;
+	}	
 }
